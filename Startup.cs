@@ -89,6 +89,10 @@ namespace TechBoost
 			app.UseHttpsRedirection();
 
 			app.UseRouting();
+
+			app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+			//app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());
+
 			app.UseAuthentication();
 			app.UseAuthorization();
 
