@@ -36,6 +36,7 @@ namespace TechBoost
 			services.AddTransient<IReviewRepository, ReviewRepository>();
 
 			var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
+
 			var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";
 			services
 				.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -91,7 +92,6 @@ namespace TechBoost
 			app.UseRouting();
 
 			app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-			//app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());
 
 			app.UseAuthentication();
 			app.UseAuthorization();
