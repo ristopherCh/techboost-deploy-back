@@ -79,7 +79,7 @@ namespace TechBoost.Controllers
 		public IActionResult Delete(int id)
 		{
 			_resourceRepository.DeleteResource(id);
-			return NoContent();
+			return NoContent(); 
 		}
 	}
 }
