@@ -91,7 +91,10 @@ namespace TechBoost
 
 			app.UseRouting();
 
-			app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+			//app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+			app.UseCors(builder => builder.WithOrigins("https://purple-mushroom-069ab330f.3.azurestaticapps.net/").AllowAnyMethod().AllowAnyHeader());
+
 
 			app.UseAuthentication();
 			app.UseAuthorization();
