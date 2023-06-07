@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - main
+    - cjh
 env:
   AZURE_WEBAPP_NAME: TechBoostAppServer
   AZURE_WEBAPP_PACKAGE_PATH: .\publish
