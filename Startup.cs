@@ -93,7 +93,7 @@ namespace TechBoost
 
 			//app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
-			app.UseCors(builder => builder.WithOrigins("https://purple-mushroom-069ab330f.3.azurestaticapps.net").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+			app.UseCors(builder => builder.WithOrigins("https://purple-mushroom-069ab330f.3.azurestaticapps.net", "http://localhost:3000").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 
 			app.UseAuthentication();
 			app.UseAuthorization();
